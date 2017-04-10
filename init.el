@@ -48,6 +48,7 @@
 (require 'setup-clipboard)
 (require 'setup-company)
 (require 'setup-exec-path-from-shell)
+(require 'setup-go)
 (require 'setup-helm)
 (require 'setup-projectile)
 (require 'setup-theme)
