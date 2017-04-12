@@ -34,6 +34,7 @@
    (cons 'go-guru melpa)
    (cons 'go-mode melpa)
    (cons 'go-rename melpa)
+   (cons 'gotest melpa)
    (cons 'helm melpa)
    (cons 'helm-projectile melpa)
    (cons 'nyan-mode melpa)
