@@ -4,6 +4,9 @@
 
 (defun my-go-mode-hook ()
 
+  ;; Setup eldoc support
+  (go-eldoc-setup)
+  
   ;; Use goimports instead of go-fmt
   (setq gofmt-command "goimports")
   
