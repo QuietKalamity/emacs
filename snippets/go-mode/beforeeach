@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: ginkgo beforeeach
+# key: BeforeEach
+# contributor : @quietkalamity
+# --
+BeforeEach(${1:statement}, func() {
+    $0
+})

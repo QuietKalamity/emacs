@@ -47,6 +47,7 @@
    (cons 'magit melpa)
    (cons 'nyan-mode melpa)
    (cons 'projectile melpa)
+   (cons 'yasnippet melpa)
    (cons 'zenburn-theme melpa)))
 
 (condition-case nil
@@ -65,6 +66,7 @@
 (require 'setup-helm)
 (require 'setup-projectile)
 (require 'setup-theme)
+(require 'setup-yasnippet)
 
 (provide 'init)
 

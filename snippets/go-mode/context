@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: ginkgo context
+# key: Context
+# contributor : @quietkalamity
+# --
+Context(${1:statement}, func() {
+    $0
+})
