@@ -7,4 +7,7 @@
 (global-set-key (kbd "C-x b") 'helm-mini)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 
+;; magit
+(global-set-key (kbd "C-x g") 'magit-status)
+
 (provide 'setup-keybinds)

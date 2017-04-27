@@ -19,7 +19,8 @@
                       :family "Menlo" :height 110))
 
 ;; custom file
-(setq custom-file "~/.emacs.d/custom.el")
+(setq custom-file "~/.emacs.d/lisp/custom.el")
+(load custom-file)
 
 ;; load path
 (add-to-list 'load-path "~/.emacs.d/lisp")
@@ -43,6 +44,7 @@
    (cons 'gotest melpa)
    (cons 'helm melpa)
    (cons 'helm-projectile melpa)
+   (cons 'magit melpa)
    (cons 'nyan-mode melpa)
    (cons 'projectile melpa)
    (cons 'zenburn-theme melpa)))

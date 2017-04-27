@@ -16,7 +16,8 @@
   ;; Customize compile command
   (if (not (string-match "go" compile-command))
       (set (make-local-variable 'compile-command)
-           "go build -v && go test -v && go vet"))
+           "go build -v && go test -v -ginkgo.noColor && go vet"))
+  ;;       "go build -v && go test -v && go vet"))
 
   ;; Guru settings
   (go-guru-hl-identifier-mode)
