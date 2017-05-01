@@ -20,7 +20,8 @@
 
 ;; custom file
 (setq custom-file "~/.emacs.d/lisp/custom.el")
-(load custom-file)
+(when (file-exists-p "~/.emacs.d/lisp/custom.el")
+     (load custom-file))
 
 ;; load path
 (add-to-list 'load-path "~/.emacs.d/lisp")
@@ -36,6 +37,7 @@
    (cons 'company melpa)
    (cons 'company-go melpa)
    (cons 'exec-path-from-shell melpa)
+   (cons 'evil melpa)
    (cons 'flycheck melpa)
    (cons 'go-eldoc melpa)
    (cons 'go-guru melpa)
@@ -44,6 +46,7 @@
    (cons 'gotest melpa)
    (cons 'helm melpa)
    (cons 'helm-projectile melpa)
+   (cons 'key-chord melpa)
    (cons 'magit melpa)
    (cons 'nyan-mode melpa)
    (cons 'projectile melpa)
@@ -61,9 +64,11 @@
 (require 'setup-clipboard)
 (require 'setup-keybinds)
 (require 'setup-company)
+(require 'setup-evil)
 (require 'setup-exec-path-from-shell)
 (require 'setup-go)
 (require 'setup-helm)
+(require 'setup-key-chord)
 (require 'setup-projectile)
 (require 'setup-theme)
 (require 'setup-yasnippet)
