@@ -50,6 +50,7 @@
    (cons 'magit melpa)
    (cons 'nyan-mode melpa)
    (cons 'projectile melpa)
+   (cons 'web-mode melpa)
    (cons 'yasnippet melpa)
    (cons 'zenburn-theme melpa)))
 
@@ -71,6 +72,7 @@
 (require 'setup-key-chord)
 (require 'setup-projectile)
 (require 'setup-theme)
+(require 'setup-web-mode)
 (require 'setup-yasnippet)
 
 (provide 'init)
