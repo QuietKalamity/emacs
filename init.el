@@ -34,6 +34,7 @@
 (defun init--install-packages ()
   (packages-install
    (cons 'avy melpa)
+   (cons 'base16-theme melpa)
    (cons 'company melpa)
    (cons 'company-go melpa)
    (cons 'exec-path-from-shell melpa)
