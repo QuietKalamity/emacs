@@ -16,7 +16,7 @@
 
 (when macosx-p
   (set-face-attribute 'default nil
-                      :family "Menlo" :height 110))
+                      :family "Menlo" :height 140))
 
 ;; custom file
 (setq custom-file "~/.emacs.d/lisp/custom.el")
