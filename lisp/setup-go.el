@@ -16,7 +16,7 @@
   ;; Customize compile command
   (if (not (string-match "go" compile-command))
       (set (make-local-variable 'compile-command)
-           "go build -v && go test -v -ginkgo.noColor -ginkgo.noisyPendings=false && go vet"))
+           "go build -race -v && go test -race -v -ginkgo.noColor -ginkgo.noisyPendings=false && go vet"))
   ;;       "go build -v && go test -v && go vet"))
 
   ;; Guru settings
