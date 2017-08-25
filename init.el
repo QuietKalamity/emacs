@@ -16,7 +16,7 @@
 
 (when macosx-p
   (set-face-attribute 'default nil
-                      :family "Menlo" :height 140))
+                      :family "Menlo" :height 120))
 
 ;; custom file
 (setq custom-file "~/.emacs.d/lisp/custom.el")
@@ -41,6 +41,7 @@
    (cons 'exec-path-from-shell melpa)
    (cons 'evil melpa)
    (cons 'flycheck melpa)
+   (cons 'flycheck-elm melpa)
    (cons 'go-eldoc melpa)
    (cons 'go-guru melpa)
    (cons 'go-mode melpa)
@@ -70,6 +71,7 @@
 (require 'setup-elm)
 (require 'setup-evil)
 (require 'setup-exec-path-from-shell)
+(require 'setup-flycheck)
 (require 'setup-go)
 (require 'setup-helm)
 (require 'setup-key-chord)
