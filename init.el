@@ -1,3 +1,16 @@
+;;; init.el --- Summary
+;;;
+;;; Filename: init.el
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;
+;;; Commentary:
+
+(require 'setup-package)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;
+;;; Code:
+
 (package-initialize)
 
 ;; platform helpers
@@ -16,7 +29,7 @@
 
 (when macosx-p
   (set-face-attribute 'default nil
-                      :family "Menlo" :height 120))
+                      :family "Menlo" :height 140))
 
 ;; custom file
 (setq custom-file "~/.emacs.d/lisp/custom.el")
@@ -27,11 +40,10 @@
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/elpa")
 
-;; setup package
-(require 'setup-package)
-
 ;; install missing extensions
 (defun init--install-packages ()
+  "Perform the package install."
+  
   (packages-install
    (cons 'avy melpa)
    (cons 'base16-theme melpa)
@@ -82,4 +94,5 @@
 
 (provide 'init)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; init.el ends here
