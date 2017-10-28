@@ -5,13 +5,20 @@
 ;;;
 ;;; Commentary:
 
-(require 'setup-package)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;
 ;;; Code:
 
 (package-initialize)
+
+;; load path
+(add-to-list 'load-path "~/.emacs.d/lisp")
+(add-to-list 'load-path "~/.emacs.d/elpa")
+
+;; custom file
+(setq custom-file "~/.emacs.d/lisp/custom.el")
+(when (file-exists-p "~/.emacs.d/lisp/custom.el")
+     (load custom-file))
 
 ;; platform helpers
 (defvar mswindows-p (string-match "windows" (symbol-name system-type)))
@@ -21,7 +28,7 @@
 ;; platform specific fonts
 (when mswindows-p
   (set-face-attribute 'default nil
-                      :family "Consolas" :height 100))
+                      :family "Consolas" :height 120))
 
 (when linux-p
   (set-face-attribute 'default nil
@@ -31,14 +38,8 @@
   (set-face-attribute 'default nil
                       :family "Menlo" :height 140))
 
-;; custom file
-(setq custom-file "~/.emacs.d/lisp/custom.el")
-(when (file-exists-p "~/.emacs.d/lisp/custom.el")
-     (load custom-file))
-
-;; load path
-(add-to-list 'load-path "~/.emacs.d/lisp")
-(add-to-list 'load-path "~/.emacs.d/elpa")
+;; load package initialization
+(require 'setup-package)
 
 ;; install missing extensions
 (defun init--install-packages ()
