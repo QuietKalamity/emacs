@@ -36,9 +36,11 @@
 
 (when macosx-p
   (set-face-attribute 'default nil
-                      :family "Menlo" :height 140))
+                      :family "Menlo" :height 120))
 
 ;; load package initialization
+(require 'setup-package)
+
 (require 'setup-package)
 
 ;; install missing extensions
@@ -67,6 +69,7 @@
    (cons 'nyan-mode melpa)
    (cons 'projectile melpa)
    (cons 'web-mode melpa)
+   (cons 'yaml-mode melpa)
    (cons 'yasnippet melpa)
    (cons 'zenburn-theme melpa)))
 
@@ -91,6 +94,7 @@
 (require 'setup-projectile)
 (require 'setup-theme)
 (require 'setup-web-mode)
+(require 'setup-whitespace)
 (require 'setup-yasnippet)
 
 (provide 'init)
