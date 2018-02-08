@@ -66,6 +66,7 @@
    (cons 'helm-projectile melpa)
    (cons 'key-chord melpa)
    (cons 'magit melpa)
+   (cons 'markdown-mode melpa)
    (cons 'nyan-mode melpa)
    (cons 'projectile melpa)
    (cons 'web-mode melpa)
