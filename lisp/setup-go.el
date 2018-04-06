@@ -2,6 +2,22 @@
 (require 'go-mode)
 (require 'go-rename)
 
+(defun bury-compile-buffer-if-successful (buffer string)
+  "Bury a compilation buffer if succeeded without warnings "
+  (if (and
+       (string-match "compilation" (buffer-name buffer))
+       (string-match "finished" string)
+       (not
+        (with-current-buffer buffer
+          (goto-char 1)
+          (search-forward "exited abnormally" nil t))))
+      (run-with-timer 1 nil
+                      (lambda (buf)
+                        (bury-buffer buf)
+                        ;; (switch-to-prev-buffer (get-buffer-window buf) 'kill))
+                        (delete-window (get-buffer-window buf)))
+                      buffer)))
+
 (defun my-go-mode-hook ()
 
   ;; Setup eldoc support
@@ -16,8 +32,9 @@
   ;; Customize compile command
   (if (not (string-match "go" compile-command))
       (set (make-local-variable 'compile-command)
-           "go build -race -v && go test -race -v -ginkgo.noColor -ginkgo.noisyPendings=false && go vet"))
-  ;;       "go build -v && go test -v && go vet"))
+           "go build -race && go test -race -ginkgo.noColor -ginkgo.noisyPendings=false && go vet"))
+  
+  (add-hook 'compilation-finish-functions 'bury-compile-buffer-if-successful)
 
   ;; Guru settings
   (go-guru-hl-identifier-mode)
