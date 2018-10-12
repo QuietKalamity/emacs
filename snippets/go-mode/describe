@@ -1,8 +1,0 @@
-# -*- mode: snippet -*-
-# name: ginkgo describe
-# key: Describe
-# contributor : @quietkalamity
-# --
-Describe(${1:statement}, func() {
-    $0
-})

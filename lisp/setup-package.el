@@ -3,9 +3,10 @@
 (package-initialize)
 
 (defvar melpa '("melpa" . "http://melpa.milkbox.net/packages/"))
-(defvar gnu '("gnu" . "http://elpa.gnu.org/packages/"))
-
 (add-to-list 'package-archives melpa t)
+
+(defvar gnu '("gnu" . "http://elpa.gnu.org/packages/"))
+(add-to-list 'package-archives gnu t)
 
 (package-initialize)
 

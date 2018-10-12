@@ -1,8 +1,0 @@
-# -*- mode: snippet -*-
-# name: ginkgo it
-# key: It
-# contributor : @quietkalamity
-# --
-It(${1:statement}, func() {
-    $0
-})

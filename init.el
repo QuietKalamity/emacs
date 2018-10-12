@@ -41,22 +41,17 @@
 ;; load package initialization
 (require 'setup-package)
 
-(require 'setup-package)
-
 ;; install missing extensions
 (defun init--install-packages ()
   "Perform the package install."
   
   (packages-install
-   (cons 'avy melpa)
    (cons 'base16-theme melpa)
    (cons 'company melpa)
    (cons 'company-go melpa)
-   (cons 'elm-mode melpa)
    (cons 'exec-path-from-shell melpa)
    (cons 'evil melpa)
    (cons 'flycheck melpa)
-   (cons 'flycheck-elm melpa)
    (cons 'go-eldoc melpa)
    (cons 'go-guru melpa)
    (cons 'go-mode melpa)
@@ -67,12 +62,9 @@
    (cons 'key-chord melpa)
    (cons 'magit melpa)
    (cons 'markdown-mode melpa)
-   (cons 'nyan-mode melpa)
    (cons 'projectile melpa)
    (cons 'web-mode melpa)
-   (cons 'yaml-mode melpa)
-   (cons 'yasnippet melpa)
-   (cons 'zenburn-theme melpa)))
+   (cons 'yaml-mode melpa)))
 
 (condition-case nil
     (init--install-packages)
@@ -82,10 +74,8 @@
 
 ;; setup cusomizations
 (require 'setup-defaults)
-(require 'setup-clipboard)
 (require 'setup-keybinds)
 (require 'setup-company)
-(require 'setup-elm)
 (require 'setup-evil)
 (require 'setup-exec-path-from-shell)
 (require 'setup-flycheck)
@@ -96,7 +86,6 @@
 (require 'setup-theme)
 (require 'setup-web-mode)
 (require 'setup-whitespace)
-(require 'setup-yasnippet)
 
 (provide 'init)
 
